@@ -6,38 +6,24 @@ public class Car {
     private int wheels;
     private int cylinders;
     private String name;
-    private int velocity;
 
-    public Car( String name,int cylinders) {
+    public Car(String name, int cylinders) {
         this.engine = true;
         this.wheels = 4;
         this.cylinders = cylinders;
         this.name = name;
-        this.velocity = 0;
     }
 
-    public void welcomeMessage() {
-        System.out.println("Welcome aboard " + name + " lets race");
+    public String startEngine() {
+        return "Car-> Engine on";
     }
 
-    public void startEngine() {
-        System.out.println("ignition on at Car");
+    public String accelerate () {
+        return "Car-> car is moving";
     }
 
-    public void accelerate(int speed) {
-        velocity += speed;
-    }
-
-    public void brake() {
-        this.velocity = 0 ;
-    }
-
-    public boolean isEngine() {
-        return engine;
-    }
-
-    public int getWheels() {
-        return wheels;
+    public String brake() {
+        return "Car-> car is braking";
     }
 
     public int getCylinders() {
@@ -48,3 +34,4 @@ public class Car {
         return name;
     }
 }
+
