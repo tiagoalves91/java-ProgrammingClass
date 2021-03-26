@@ -2,54 +2,72 @@ package com.company;
 
 public class Hamburger {
 
+    //Provided by Tim !
+
     private String name;
-    private String breadRollType;
     private String meat;
+    private double price;
+    private String breadRollType;
 
-    private String addTomato;
-    private double priceTomato;
+    private String addition1Name;
+    private double addition1Price;
 
-    private String addOnions;
-    private double priceAddOnions;
+    private String addition2Name;
+    private double addition2Price;
 
-    private String addMostarda;
-    private double priceMostarda;
+    private String addition3Name;
+    private double addition3Price;
 
-    private String addPeppers;
-    private double pricePeppers;
+    private String addition4Name;
+    private double addition4Price;
 
-
-    private double burguerPrice;
-    private double addOnPrice;
-
-    public Hamburger(String name,String breadRollType, String meat,double burguerPrice) {
+    public Hamburger(String name, String meat, double price, String breadRollType) {
         this.name = name;
-        this.breadRollType = breadRollType;
         this.meat = meat;
-
-        this.burguerPrice = 10;
-        this.addOnPrice = addOnPrice;
+        this.price = price;
+        this.breadRollType = breadRollType;
     }
 
-    public void addTomato(String name, double price) {
-        this.addTomato = name;
-        this.priceTomato = 1;
-}
-
-    public void addOnios(String name, double price) {
-        this.addOnions = name;
-        this.priceAddOnions = 0.5;
+    public void addHamburgerAdditon1(String name, double price) {
+        this.addition1Name = name;
+        this.addition1Price = price;
     }
 
-    public void addPeppers(String name, double price) {
-        this.addPeppers = name;
-        this.pricePeppers = 1.4;
+    public void addHamburgerAdditon2(String name, double price) {
+        this.addition2Name = name;
+        this.addition2Price = price;
     }
 
-    public void addMostarda(String name, double price) {
-        this.addMostarda = name;
-        this.priceMostarda = 1.3;
+    public void addHamburgerAdditon3(String name, double price) {
+        this.addition3Name = name;
+        this.addition3Price = price;
     }
 
+    public void addHamburgerAdditon4(String name, double price) {
+        this.addition4Name = name;
+        this.addition4Price = price;
+    }
 
+    public double itemizeHamburger() {
+        double hamburgerPrice = this.price;
+        System.out.println(this.name + " hamburger " + "on a " + this.breadRollType + " roll "
+                + "with " + this.meat + ", price is " + this.price);
+        if(this.addition1Name != null) {
+            hamburgerPrice += this.addition1Price;
+            System.out.println("Added " + this.addition1Name + " for an extra " + this.addition1Price);
+        }
+        if(this.addition2Name != null) {
+            hamburgerPrice += this.addition2Price;
+            System.out.println("Added " + this.addition2Name + " for an extra " + this.addition2Price);
+        }
+        if(this.addition3Name != null) {
+            hamburgerPrice += this.addition3Price;
+            System.out.println("Added " + this.addition3Name + " for an extra " + this.addition3Price);
+        }
+        if(this.addition4Name != null) {
+            hamburgerPrice += this.addition4Price;
+            System.out.println("Added " + this.addition4Name + " for an extra " + this.addition4Price);
+        }
+        return hamburgerPrice;
+    }
 }
