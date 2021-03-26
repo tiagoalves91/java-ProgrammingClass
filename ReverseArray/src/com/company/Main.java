@@ -3,7 +3,6 @@ package com.company;
 import java.util.Arrays;
 
 public class Main {
-
     public static void main(String[] args) {
 
         int [] array = {5,12,15,20,30};
